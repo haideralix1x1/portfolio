@@ -109,16 +109,20 @@ export default function PortfolioPage() {
       <section className="twins-section section-rule" id="twins">
         <div className="section-heading"><p className="section-kicker">[ 003 — Digital twins ]</p><p className="muted">Simulation systems built in Unity</p></div>
         <div className="twins-grid">
-          {digitalTwins.map((item) => (
-            <article className="twin-card" key={item.title}>
-              <div className="twin-media"><img src={item.image} alt={item.title} /></div>
-              <div className="twin-copy">
-                <p className="project-number">{item.number}</p>
-                <p className="eyebrow">{item.type}</p>
-                <h3>{item.title}</h3>
-                <p className="body-copy">{item.copy}</p>
-              </div>
-            </article>
+          {Array.from({ length: Math.ceil(digitalTwins.length / 2) }, (_, rowIndex) => (
+            <div className="twins-row" key={rowIndex}>
+              {digitalTwins.slice(rowIndex * 2, rowIndex * 2 + 2).map((item) => (
+                <article className="twin-card" key={item.title}>
+                  <div className="twin-media"><img src={item.image} alt={item.title} /></div>
+                  <div className="twin-copy">
+                    <p className="project-number">{item.number}</p>
+                    <p className="eyebrow">{item.type}</p>
+                    <h3>{item.title}</h3>
+                    <p className="body-copy">{item.copy}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           ))}
         </div>
       </section>
