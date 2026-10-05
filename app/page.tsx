@@ -5,7 +5,7 @@ import { ArrowDownRight, ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Code2, D
 
 const bookCover = "/Book-Cover.png"
 
-const statementArt = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_7xd9z77xd9z77xd9-JvgQdyQXxp44AiJZf0c0dMykGiT3vg.jpg"
+const statementArt = "/statement-art.jpg"
 
 const portrait = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-z6cBfQRQ4vGN9pRxCZMB9YzlXs9MPZ.jpg"
 
